@@ -7,9 +7,6 @@ WORKDIR /app
 # 将当前目录（也就是包含Dockerfile和Hertz项目代码的目录）下的所有内容复制到镜像内的 /app 目录
 COPY . /app
 
-# 设置Go环境变量，指定Go模块的代理，加快依赖下载速度
-ENV GOPROXY https://goproxy.cn,direct
-
 # 安装Hertz相关依赖，运行Go命令安装项目依赖，假设项目有go.mod和go.sum文件用于管理依赖
 RUN go mod download
 
