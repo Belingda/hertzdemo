@@ -14,7 +14,7 @@ RUN go mod download
 RUN go build -o hertz_server main.go
 
 # 暴露Hertz服务器运行的端口，Hertz默认端口一般是8888，根据实际项目配置修改端口号
-EXPOSE 8888
+EXPOSE 8080
 
 # 定义容器启动时执行的命令，启动编译好的Hertz可执行文件
 CMD ["./hertz_server"]
